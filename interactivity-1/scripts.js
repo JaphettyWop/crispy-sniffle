@@ -28,7 +28,7 @@ var greeting = document.querySelector('.greeting')
 hand.addEventListener('click', sayHello)
 
 function sayHello() {
-	greeting.textContent = 'Peace was never an option >:('
+	greeting.textContent = 'peace was NEVER an option! >:('
 }
 
 

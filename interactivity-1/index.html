@@ -4,25 +4,65 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link href="style.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Viga" rel="stylesheet">
 </head>
 <body>
 	<main>
-
 		<!-- Invert -->
-		<button class="bg-color">Invert</button>
+			<button class="bg-color">Invert</button>
+
+		<!-- Button Showing what time it is -->
+			<button onclick="document.getElementById('demo').innerHTML=Date()">I know what time it is</button>
+
+			<p id="demo"></p>
 
 
 		<!-- Say hello -->
-		<div class="greeting">Hello?</div>
-		<div class="waving-hand">&#128075;</div>
+			<div class="greeting">HIGH FIVE?</div>
+			<div class="waving-hand">&#128075;</div>
 
+
+
+		<!-- Alert Box -->
+			<button onclick="myFunction()">Want something special?</button>
+			
+			<p id="demo"></p>
+			
+			<script>
+			function myFunction() {
+			  var txt;
+			  if (confirm("Press a button!")) {
+			    txt = "YAY U GET NOTHING!!!";
+			  } else {
+			    txt = "You cancelled it...WHAT THE HELL!!";
+			  }
+			  document.getElementById("demo").innerHTML = txt;
+			}
+			</script>
 
 		<!-- Show or hide content -->
-		<div class="content">
-			<img src="images/fern.jpg" alt="fern">
-		</div>
-		<a href="#" class="toggle">?</a>
+			<div class="content">
+				<img src="images/herb.jpg" alt="herb">
+			</div>
+			<button><a href="#" class="toggle">† Click to reveal the Holy Herbs †</a></button>
 
+
+		<!-- Window Size -->
+			<button>(then resize the window)</button>
+			<body onresize="myFunction()"></body>
+
+				<p id="endo"></p>
+
+				<script>
+					function myFunction() {
+				  	var w = window.outerWidth;
+				  	var h = window.outerHeight;
+				  	var txt = "Window size: width=" + w + ", height=" + h;
+				  	document.getElementById("endo").innerHTML = txt;
+						}
+				</script>
+</body>
+	
 	</main>
 
 	<!-- Link up the JS file so that it loads in -->
